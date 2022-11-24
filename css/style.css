@@ -373,4 +373,22 @@ nav .container ul li a {
 /*end contacts*/
 
 /*start footer*/
+footer {
+  background: #eb233c;
+  height: 70px;
+  color: #fff;
+}
+
+footer .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer .social-links a {
+  color: #fff;
+  margin: 0 5px;
+  font-size: 1.5rem;
+}
 /*end footer*/
