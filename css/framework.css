@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+    padding: 0 2rem;
+  }
+}
+/*
+@media (min-width: 992px) {
+    
+}
+
+@media (min-width: 1200px) { ... }
+*/
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+section {
+  padding: 90px 0;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 13, 27, 0.8);
+  color: #fff;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  color: #fff;
+  text-transform: capitalize;
+  background-color: #eb233c;
+  border-radius: 33px;
+  border: 2px solid transparent;
+  padding: 15px;
+  display: block;
+  width: 270px;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+
+.btn:hover {
+  border: 2px solid #eb233c;
+  background: none;
+  color: #eb233c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  font-family: "Lobster Two", Arial, sans-serif;
+  text-transform: capitalize;
+}
+
+.title {
+  text-align: center;
+  text-transform: capitalize;
+  position: relative;
+  width: 230px;
+  margin: 0 auto 60px;
+  border-bottom: 2px solid #eb233c;
+}
+
+input {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #eb233c;
+  margin: 0 5px;
+  padding: 6px;
+}

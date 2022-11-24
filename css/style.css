@@ -1,0 +1,376 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/*start navbar*/
+nav {
+  background-color: #433344;
+  color: #fff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+nav .container .brand {
+  font-weight: 400;
+}
+
+nav .container .brand h1 {
+  margin: 0;
+  color: #fff;
+}
+
+nav .container .brand h1:hover {
+  color: #eb233c;
+}
+
+nav .container ul {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  font-size: small;
+  transition: 0.3s all ease-out;
+}
+
+nav .container ul li {
+  padding: 0 10px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-bottom: 2px solid transparent;
+  position: relative;
+  transition: all 0.3s linear;
+}
+
+nav .container ul li:hover,
+nav .container ul li.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid #eb233c;
+  cursor: pointer;
+}
+
+nav .container ul li:hover::after {
+  transform: scaleX(1);
+}
+
+nav .container ul li a {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bars-btn {
+  position: absolute;
+  right: 1rem;
+  width: 27px;
+  display: none;
+  cursor: pointer;
+}
+
+.bars-btn .bar {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  margin: 7px 0;
+}
+
+.bars-btn.active .bar {
+  background: #eb233c;
+}
+
+@media (max-width: 768px) {
+  nav .container ul {
+    transform: translateY(-150%);
+    flex-direction: column;
+    width: 200px;
+    margin-top: 100px;
+    background: #433344;
+    height: 200px;
+    margin-top: 250px;
+    width: 100%;
+  }
+
+  nav .container ul.show {
+    transform: translateY(0);
+  }
+
+  nav .container ul li {
+    height: 25%;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav .bars-btn {
+    display: block;
+  }
+}
+
+/*end navbar*/
+
+/*start banner*/
+.banner {
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+}
+
+.banner .cover h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.banner .cover h1 span {
+  color: #eb233c;
+}
+
+.banner .cover a {
+  margin-top: 50px;
+  color: #fff;
+  width: 159px;
+  height: 54px;
+  border: 1px solid #fff;
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  opacity: 0.7;
+  text-transform: capitalize;
+}
+
+.banner .cover a:hover {
+  opacity: 1;
+  background-color: #fff;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .banner .cover h1 {
+    font-size: 2rem;
+  }
+  .banner .cover p {
+    font-size: 13px;
+  }
+  .banner .cover a {
+    width: 130px;
+    height: 46px;
+    font-size: 18px;
+  }
+}
+/*end banner*/
+
+/*start items*/
+.items .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.items .container .item {
+  display: flex;
+  margin: 0 15px;
+}
+
+.items .container .item .left {
+  margin: 20px 15px;
+  color: #eb233c;
+  font-size: 20px;
+}
+
+.items .container .item .right p {
+  font-size: small;
+}
+
+@media (min-width: 768px) {
+  .items .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .items .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .items .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/*end items*/
+
+/*start work*/
+.work {
+  background-color: #faf4fa;
+}
+
+.work .projects-wraper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.work .projects-wraper .project {
+  width: 95%;
+  margin-bottom: 5%;
+  transition: all 0.2s linear;
+}
+
+.work .projects-wraper .project:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.work a {
+  margin: 50px auto 0;
+}
+
+@media (max-width: 768px) {
+  .work .projects-wraper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .work .projects-wraper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .work .projects-wraper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+/*end work*/
+
+/*start subscribe*/
+.subscribe {
+  padding: 140px 0;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+}
+
+.subscribe .subscribe-wraper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+}
+.subscribe .subscribe-wraper .right {
+  margin-left: 25px;
+}
+
+@media (max-width: 768px) {
+  .subscribe .subscribe-wraper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+/*end subscribe*/
+
+/*start about us*/
+.about-wraper {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+}
+
+.about-wraper .counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-wraper > p {
+  margin-left: 40px;
+}
+
+.about-wraper .clients,
+.about-wraper .projects-completed {
+  margin: 0 40px;
+  text-align: center;
+}
+
+.about-wraper .num {
+  font-size: 50px;
+  margin: 30px 0;
+  color: #eb233c;
+}
+
+@media (max-width: 768px) {
+  .about-wraper {
+    grid-template-columns: 1fr;
+  }
+}
+/*end about us*/
+
+/*start contacts*/
+.contact-us {
+  background-color: #f8f8f8;
+}
+
+.contact-us .contact-wraper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+}
+
+.contact-us form .input-wraper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contact-us form .message {
+  width: 70%;
+  height: 100px;
+  margin-bottom: 25px;
+}
+
+.contact-us .contacts h2 {
+  color: #eb233c;
+}
+
+@media (max-width: 768px) {
+  .contact-us .contact-wraper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .contact-us form .input-wraper {
+    flex-direction: column;
+  }
+
+  .contact-us form .input-wraper input {
+    margin-bottom: 1rem;
+  }
+
+  .contact-us .btn {
+    margin: auto;
+  }
+}
+/*end contacts*/
+
+/*start footer*/
+/*end footer*/
