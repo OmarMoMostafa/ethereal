@@ -391,4 +391,10 @@ footer .social-links a {
   margin: 0 5px;
   font-size: 1.5rem;
 }
+
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+  }
+}
 /*end footer*/
